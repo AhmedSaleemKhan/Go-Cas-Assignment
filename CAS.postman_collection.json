@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "0d3e021e-6c0d-446e-bde3-337f3cdd07e6",
+		"name": "CAS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "upload_file",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": "",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/ahmed_ali/Downloads/test.go.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3434/blob",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3434",
+					"path": [
+						"blob"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_blob",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3434/blob/?algorithm=sha256&digest=88e708a8f32d3431eacb76569548a3fc647fbf38308dd07dea4261e1cbb3cdde",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3434",
+					"path": [
+						"blob",
+						""
+					],
+					"query": [
+						{
+							"key": "algorithm",
+							"value": "sha256"
+						},
+						{
+							"key": "digest",
+							"value": "88e708a8f32d3431eacb76569548a3fc647fbf38308dd07dea4261e1cbb3cdde"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3434/stats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3434",
+					"path": [
+						"stats"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
